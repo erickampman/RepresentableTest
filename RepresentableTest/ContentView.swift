@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+	@State var buttonValue = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+			Text("Button Value: \(buttonValue)")
+			ButtonViewControllerRepresentable(buttonValue: $buttonValue)
         }
         .padding()
     }
